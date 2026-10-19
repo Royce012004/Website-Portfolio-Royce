@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html::-webkit-scrollbar {
+    display: none;
+}
+.body{
+    line-height: 1.6;
+    background-color: transparent;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000;
+}
+.header ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    padding: 9px 20px;
+    font-family: 'VALORANT', sans-serif;
+}
+
+.header ul li {
+    margin: 0;
+    text-align: center;
+}
+
+.header ul li:first-child {
+    text-align: left;
+}
+
+.header ul li:last-child {
+    text-align: right;
+}
+
+.header ul li a {
+    color: #D6D6D6;
+    text-decoration: none;
+    font-size: clamp(10px, 1vw, 14px);
+    transition: color 0.3s ease;
+}
+
+.header ul li a:hover {
+    color: #ff0000;
+}
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../img/heropage.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    font-family: 'VALORANT', sans-serif;
+    position: relative;
+}
+.hero h1 {
+    font-size: 200px;
+    color: #D6D6D6;
+    text-align: left;
+    transform: scaleY(3);
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+.herofoot {
+     position: absolute;
+    bottom: 30px;
+    left: 4%;
+    right: 4%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    color: #D6D6D6;
+}
+.herofoot p{
+   margin: 0;
+    width: auto;
+    max-width: 45%;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.projects {
+    width: 100%;
+    height: 100vh;
+    padding: 35px 5% 40px;
+    box-sizing: border-box;
+    background: #D6D6D6;
+    color: #222;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 35px;
+    row-gap: 25px;
+    align-items: start;
+}
+.Tools {
+    grid-column: 1;
+    grid-row: 1;
+    font-family: 'VALORANT', sans-serif;
+}
+
+.Tools h2 {
+    font-size: 11px;
+    margin: 0 0 12px;
+    text-transform: uppercase;
+}
+.Tools ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.Tools li {
+    font-size: 8px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+.projectoverview {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    max-width: 300px;
+    justify-self: end;
+}
+.projectoverview h2 {
+    font-family: 'VALORANT', sans-serif;
+    color: #E65357;
+    font-size: clamp(60px, 7vw, 48px);
+    line-height: 1;
+    text-align: right;
+    margin: 0 0 12px;
+    text-transform: uppercase;
+}
+.projectoverview p {
+    font-size: 20px;
+    line-height: 1.4;
+    max-width: 260px;
+    margin: 0 0 0 auto;
+}
+.projectimage {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    position: relative;
+    width: 100%;
+    height: clamp(100px, 15vw, 160px);
+    overflow: hidden;
+}
+
+.projectimage img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: fill;
+    object-position: center;
+}
+@media (max-width: 600px) {
+    .projects {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 18px;
+        padding: 25px 5%;
+    }
+
+    .projectoverview {
+        max-width: 100%;
+    }
+
+    .projectoverview h2 {
+        font-size: clamp(19px, 5vw, 28px);
+    }
+
+    .projectoverview p {
+        font-size: 8px;
+    }
+
+    .projectimage {
+        height: 120px;
+    }
+}
